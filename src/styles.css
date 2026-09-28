@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --color-background: #050d16;
+  --color-foreground: #f4fbfc;
+  --color-card: #0b1c28;
+  --color-card-foreground: #f4fbfc;
+  --color-primary: #1ad4ff;
+  --color-primary-foreground: #03222c;
+  --color-secondary: #123040;
+  --color-secondary-foreground: #f4fbfc;
+  --color-muted: #123040;
+  --color-muted-foreground: #9ec0cc;
+  --color-accent: #e11d2e;
+  --color-accent-foreground: #fff7f7;
+  --color-border: #21485a;
+  --color-ring: #1ad4ff;
+  --color-leaf: #5ae0ff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fff7f7;
+
+  --color-stem: #5ad4ff;
+  --color-energy: #3ee0a8;
+  --color-space: #ff7a59;
+  --color-america: #7ecbff;
+
+  --color-btc: #f7931a;
+  --color-btc-foreground: #1a1208;
+  --color-eth: #627eea;
+  --color-eth-foreground: #f8fafc;
+  --color-bnb: #f3ba2f;
+  --color-bnb-foreground: #1a1405;
+  --color-sol: #14f195;
+  --color-sol-foreground: #042016;
+  --color-usdt: #26a17b;
+  --color-usdt-foreground: #f4fffb;
+  --color-usdc: #2775ca;
+  --color-usdc-foreground: #f4f8ff;
+  --color-usdg: #0f8f6a;
+  --color-usdg-foreground: #f4fffb;
+  --color-doge: #c2a633;
+  --color-doge-foreground: #1a1405;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  img {
+    image-rendering: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.coin-sol {
+  background-image: linear-gradient(135deg, #9945ff, #14f195);
+  color: #042016;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
